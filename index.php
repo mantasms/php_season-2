@@ -4,8 +4,10 @@ class ThailandSurprise {
 
     public $clothes;
     private $balls;
+    private $name;
 
-    public function __construct() {
+    public function __construct($name) {
+        $this->name = $name;
         $this->balls = rand(0, 1);
     }
 
@@ -27,7 +29,7 @@ class ThailandSurprise {
 
 }
 
-$surprise = new ThailandSurprise();
+$surprise = new ThailandSurprise('mazafaka');
 
 ?>
 <html>
