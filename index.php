@@ -8,12 +8,14 @@ class ThailandSurprise {
     public function __construct() {
         $this->balls = rand(0, 1);
     }
-    
+
     public function attachBalls() {
-        
+        $this->balls = true;
     }
-    
-    public function detachBalls (){
+
+    public function detachBalls() {
+        $this->balls = false;
+    }
 
 }
 
