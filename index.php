@@ -1,10 +1,14 @@
 <?php
+
 class ThailandSurprise {
-public $clothes;
 
-public function __construct($clothes){
-    $this->clothes = @clothes;
-}
+    private $balls;
+
+    public function __construct() {
+        $this->balls = rand(0, 1);
+    }
+
 }
 
-$miniskirt = new ThailandSurprise('miniskirt');
+$surprise = new ThailandSurprise();
+?>
