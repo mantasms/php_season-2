@@ -1,39 +1,44 @@
 <?php
+declare(striuct_types = 1);
 
-class Jacuzzi {
+class Gerimas {
 
-    public $amount_water;
-    public $amount_non_water;
+    private $data;
 
-//by default bus parametrai 0, t.y.- jei nieko nepaduosim-bus 0, o jei paduosim i konstruktoriu kazka, tai paims tuos parametrus.
-    public function __construct($amount_water = 0, $amount_non_water = 0) {
-        $this->amount_water = $amount_water;
-        $this->amount_non_water = $amount_non_water;
+    public function __construct() {
+        $this->data = [
+            'name' => null,
+            'amount_ml' => null,
+            'abarot' => float
+        ];
     }
 
-    public function getWaterPurity() {
-        return $this->amount_water / ($this->amount_water + $this->amount_non_water) * 100;
+    public function setName(string $name) {
+        $this->name = $name;
+    }
+
+    public function getName(string $name) {
+        $this->name = $name;
+    }
+
+    public function setAmountml(int $amount_ml) {
+        $this->amount_ml = $amount_ml;
+    }
+
+    public function getAmountml(int $amount_ml) {
+        $this->amount_ml = $amount_ml;
+    }
+
+    public function setAbarot(float $abarot) {
+        $this->abarot = $abarot;
+    }
+
+    public function getAbarot(float $abarot) {
+        $this->abarot = $abarot;
     }
 
 }
 
-class User {
-
-    public function peeInJacuzzi(Jacuzzi $jacuzzi, $amount) {
-       return $jacuzzi->amount_non_water += $amount;
-        
-    }
-
-}
-
-$pliuskupliusku = new Jacuzzi(600000, 0);
-$Petras = new User;
-$Piotra = new User;
-
-print $Petras->peeInJacuzzi($pliuskupliusku, rand(0, 200));
-print $Piotra->peeInJacuzzi($pliuskupliusku, rand(0, 100));
-
-print $pliuskupliusku->getWaterPurity();
 ?>
 <html>
     <head>
