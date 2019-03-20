@@ -20,13 +20,19 @@ class Jacuzzi {
 class User {
 
     public function peeInJacuzzi(Jacuzzi $jacuzzi, $amount) {
-        $jacuzzi->$amount_non_water += $amount;
+       return $jacuzzi->amount_non_water += $amount;
+        
     }
 
 }
 
-$pliuskupliusku = new Jacuzzi(100, 40);
-$balvonas = new User(10);
+$pliuskupliusku = new Jacuzzi(600000, 0);
+$Petras = new User;
+$Piotra = new User;
+
+print $Petras->peeInJacuzzi($pliuskupliusku, rand(0, 200));
+print $Piotra->peeInJacuzzi($pliuskupliusku, rand(0, 100));
+
 print $pliuskupliusku->getWaterPurity();
 ?>
 <html>
@@ -34,5 +40,8 @@ print $pliuskupliusku->getWaterPurity();
         <title> OOP </title>
     </head>
     <body>
+        <p>
+
+        </p>
     </body>
 </html>
